@@ -116,7 +116,8 @@ for s in data:
     else:
         delta.append(float(s))
 dx = np.array(delta[: nx])
-dy = np.array(delta[-ny:])
+#dy = np.array(delta[-ny:])
+dy = np.array(delta[-ny:][::-1])
 oy = ey-np.sum(dy)
 ex = ox+np.sum(dx)
 x = ox+np.cumsum(dx)-0.5*dx
